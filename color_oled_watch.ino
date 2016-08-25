@@ -49,6 +49,36 @@
 Adafruit_SSD1331 display = Adafruit_SSD1331(cs, dc, rst);
 
 float p = 3.1415926;
+/*
+    RetroWatch Arduino is a part of open source smart watch project.
+    Copyright (C) 2014  Suh Young Bae
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see [http://www.gnu.org/licenses/].
+*/
+/*
+Retro Watch Arduino v1.0
+  Get the latest version, android host app at 
+  ------> https://github.com/godstale/retrowatch
+  ------> or http://www.hardcopyworld.com
+Written by Suh Young Bae (godstale@hotmail.com)
+All text above, and the first splash screen(Adafruit) must be included in any redistribution
+*/
+
+//#include <avr/pgmspace.h>
+#include <Wire.h>
+#include <SoftwareSerial.h>
+#include <Adafruit_GFX.h>
+
+#include <math.h>
+#include "bitmap.h"
 
 void setup(void) {
   Serial.begin(9600);
@@ -111,36 +141,7 @@ void lcdTestPattern(void)
     }
   }
 }
-/*
-    RetroWatch Arduino is a part of open source smart watch project.
-    Copyright (C) 2014  Suh Young Bae
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see [http://www.gnu.org/licenses/].
-*/
-/*
-Retro Watch Arduino v1.0
-  Get the latest version, android host app at 
-  ------> https://github.com/godstale/retrowatch
-  ------> or http://www.hardcopyworld.com
-Written by Suh Young Bae (godstale@hotmail.com)
-All text above, and the first splash screen(Adafruit) must be included in any redistribution
-*/
 
-//#include <avr/pgmspace.h>
-#include <Wire.h>
-#include <SoftwareSerial.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-#include <math.h>
-#include "bitmap.h"
 
 ///////////////////////////////////////////////////////////////////
 //----- OLED instance
